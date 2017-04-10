@@ -28,6 +28,11 @@
 		B45A5D5E1E962D7B0076E99E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B45A5D5C1E962D7B0076E99E /* LaunchScreen.storyboard */; };
 		B45A5D691E962D7B0076E99E /* YEFlyGoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45A5D681E962D7B0076E99E /* YEFlyGoTests.swift */; };
 		B45A5D741E962D7C0076E99E /* YEFlyGoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45A5D731E962D7C0076E99E /* YEFlyGoUITests.swift */; };
+		B4FE15DD1E9B152D00AACD9C /* FeiGouNetAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE15DC1E9B152D00AACD9C /* FeiGouNetAPI.swift */; };
+		B4FE15DF1E9B675000AACD9C /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE15DE1E9B675000AACD9C /* OrderViewController.swift */; };
+		B4FE15E11E9B676C00AACD9C /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE15E01E9B676C00AACD9C /* OrderModel.swift */; };
+		B4FE15E31E9B67A700AACD9C /* OrderBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE15E21E9B67A700AACD9C /* OrderBarView.swift */; };
+		B4FE15E71E9B907E00AACD9C /* BarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE15E61E9B907E00AACD9C /* BarViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +85,11 @@
 		B45A5D6F1E962D7B0076E99E /* YEFlyGoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YEFlyGoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45A5D731E962D7C0076E99E /* YEFlyGoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YEFlyGoUITests.swift; sourceTree = "<group>"; };
 		B45A5D751E962D7C0076E99E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4FE15DC1E9B152D00AACD9C /* FeiGouNetAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeiGouNetAPI.swift; sourceTree = "<group>"; };
+		B4FE15DE1E9B675000AACD9C /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		B4FE15E01E9B676C00AACD9C /* OrderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
+		B4FE15E21E9B67A700AACD9C /* OrderBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderBarView.swift; sourceTree = "<group>"; };
+		B4FE15E61E9B907E00AACD9C /* BarViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarViewCell.swift; sourceTree = "<group>"; };
 		B9AA6DCC44E41DB803852F09 /* Pods-YEFlyGoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YEFlyGoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YEFlyGoUITests/Pods-YEFlyGoUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,6 +192,7 @@
 		B455572A1E972109005431F0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B4FE15DE1E9B675000AACD9C /* OrderViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -189,6 +200,7 @@
 		B455572B1E972109005431F0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B4FE15E01E9B676C00AACD9C /* OrderModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,6 +208,8 @@
 		B455572C1E972109005431F0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B4FE15E21E9B67A700AACD9C /* OrderBarView.swift */,
+				B4FE15E61E9B907E00AACD9C /* BarViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -247,6 +261,7 @@
 		B45557321E972109005431F0 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				B4FE15DC1E9B152D00AACD9C /* FeiGouNetAPI.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -629,12 +644,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B45557BD1E972826005431F0 /* BannerView.swift in Sources */,
+				B4FE15E31E9B67A700AACD9C /* OrderBarView.swift in Sources */,
+				B4FE15DF1E9B675000AACD9C /* OrderViewController.swift in Sources */,
+				B4FE15E71E9B907E00AACD9C /* BarViewCell.swift in Sources */,
 				B45557C41E9729E3005431F0 /* CategoryCell.swift in Sources */,
 				B45557C01E97295D005431F0 /* HomeListCell.swift in Sources */,
 				B45558091E974007005431F0 /* GlobalConfig.swift in Sources */,
+				B4FE15DD1E9B152D00AACD9C /* FeiGouNetAPI.swift in Sources */,
 				B45A5D511E962D7B0076E99E /* AppDelegate.swift in Sources */,
 				B45A5D591E962D7B0076E99E /* YEFlyGo.xcdatamodeld in Sources */,
 				B45557B91E9727D7005431F0 /* HomeViewController.swift in Sources */,
+				B4FE15E11E9B676C00AACD9C /* OrderModel.swift in Sources */,
 				B45557BB1E9727F4005431F0 /* HomeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

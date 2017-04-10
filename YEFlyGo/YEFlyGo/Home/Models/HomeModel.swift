@@ -38,4 +38,21 @@ struct productListModel : HandyJSON {
     }
 }
 
+struct categoryModel : HandyJSON {
+    var categoryList : [categoryListModel]?
+}
+
+struct categoryListModel : HandyJSON {
+    var categoryID : Int?
+    var createTime : Int64?
+    var icon : String?
+    var name : String?
+    var updateTime : Int64?
+    mutating func mapping(mapper: HelpingMapper) {
+        mapper.specify(property: &icon) { (string) -> (String) in
+            return "http://120.24.3.172:8080/feigou-api" + string
+        }
+    }
+}
+
 
