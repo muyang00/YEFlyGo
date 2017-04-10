@@ -15,7 +15,7 @@ class OrderViewController: UIViewController {
     fileprivate lazy var barView : OrderBarView = {
         
         let barView = OrderBarView(frame: CGRect(x: 0, y: 64, width: kScreenW, height: 33))
-     
+         barView.delegate = self
         return barView
     }()
     fileprivate lazy var containerView : UICollectionView = {

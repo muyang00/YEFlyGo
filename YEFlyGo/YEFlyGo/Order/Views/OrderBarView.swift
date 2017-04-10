@@ -12,7 +12,7 @@ protocol OrderBarViewDelegate {
 
 import UIKit
 
-let kBarViewID = "kBarViewID"
+let kBarViewCellID = "BarViewCell"
 
 class OrderBarView: UIView {
 
@@ -27,7 +27,7 @@ class OrderBarView: UIView {
         barView.delegate = self
         barView.dataSource = self
         barView.backgroundColor = UIColor.white
-        barView.register(BarViewCell.self, forCellWithReuseIdentifier: kBarViewID)
+        barView.register(BarViewCell.self, forCellWithReuseIdentifier: kBarViewCellID)
         return barView
     }()
     fileprivate lazy var lineView : UIView = {
@@ -55,6 +55,10 @@ class OrderBarView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    class func creatOrderView() -> OrderBarView{
+        let View = OrderBarView()
+        return View
+    }
     
 }
 
@@ -69,7 +73,7 @@ extension OrderBarView : UICollectionViewDataSource {
         return 5
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kBarViewID, for: indexPath) as! BarViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kBarViewCellID, for: indexPath) as! BarViewCell
         
          cell.lab.text = titleArr[indexPath.row]
         return cell
