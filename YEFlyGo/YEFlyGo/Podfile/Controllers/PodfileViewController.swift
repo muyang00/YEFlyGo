@@ -8,12 +8,12 @@
 
 import UIKit
 
-private let kPodfileCellID = "kPodfileCellID"
+let kPodfileCellID = "kPodfileCellID"
 
 class PodfileViewController: UIViewController {
 
-    var imgArr = ["address", "message", "evaluate", "member_card", "collect", "password_setting", "set"]
-    var titleArr = ["我的收货地址", "我的消息", "我的评价", "会员卡", "我的收藏", "密码设置", "设置"]
+    let imgArr = ["address", "message", "evaluate", "member_card", "collect", "password_setting", "set"]
+    let titleArr = ["我的收货地址", "我的消息", "我的评价", "会员卡", "我的收藏", "密码设置", "设置"]
     
     fileprivate lazy var tableView : UITableView = {
        let tableView = UITableView(frame: self.view.bounds, style: .plain)
@@ -21,7 +21,7 @@ class PodfileViewController: UIViewController {
         tableView.rowHeight = 70
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(PodfileViewCell.self, forCellReuseIdentifier: kPodfileCellID)
+        tableView.register(UINib(nibName: "PodfileViewCell", bundle: nil), forCellReuseIdentifier: kPodfileCellID)
         tableView.tableFooterView = UIView()
         return tableView
     }()
@@ -39,12 +39,11 @@ class PodfileViewController: UIViewController {
 //MARK: - 设置UI界面内容
 extension PodfileViewController {
     func setupUI() {
-
-
-        
+       
         view.addSubview(tableView)
     }
 }
+
 //MARK: - 数据请求
 extension PodfileViewController {
     func loadData() {
@@ -64,13 +63,11 @@ extension PodfileViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: kPodfileCellID, for: indexPath) as! PodfileViewCell
         
-        //  cell.iconimageView.image = UIImage.init(named: imgArr[indexPath.row])
-        
-        
-        cell.podfileLabel.text = "wode"
-        
+        cell.podfileLabel.text = titleArr[indexPath.row]
+        cell.podfileIcon.image = UIImage(named: imgArr[indexPath.row])
         
         return cell
     }

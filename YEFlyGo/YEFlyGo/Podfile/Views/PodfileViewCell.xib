@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,10 +19,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="quV-cW-zpi">
-                        <rect key="frame" x="10" y="5" width="77" height="67"/>
+                        <rect key="frame" x="10" y="15" width="48" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="47.5" id="Bj7-Y9-F51"/>
+                            <constraint firstAttribute="width" constant="47.5" id="eht-th-EUG"/>
+                        </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6a-UE-dsf">
-                        <rect key="frame" x="97" y="10" width="190" height="58"/>
+                        <rect key="frame" x="68" y="10" width="219" height="57.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -32,12 +35,11 @@
                 <constraints>
                     <constraint firstItem="o6a-UE-dsf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="0Fz-iI-YpK"/>
                     <constraint firstAttribute="trailing" secondItem="o6a-UE-dsf" secondAttribute="trailing" constant="10" id="BQF-Zc-fgs"/>
-                    <constraint firstAttribute="bottom" secondItem="quV-cW-zpi" secondAttribute="bottom" constant="5" id="HOs-XN-Hdy"/>
-                    <constraint firstItem="quV-cW-zpi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="SB6-EP-yYr"/>
-                    <constraint firstItem="o6a-UE-dsf" firstAttribute="leading" secondItem="quV-cW-zpi" secondAttribute="trailing" constant="10" id="api-Nk-Deo"/>
+                    <constraint firstItem="quV-cW-zpi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="Fpp-Zc-nai"/>
+                    <constraint firstItem="o6a-UE-dsf" firstAttribute="leading" secondItem="quV-cW-zpi" secondAttribute="trailing" constant="10" id="Ur9-oq-GKn"/>
                     <constraint firstItem="o6a-UE-dsf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="f2y-GG-Nd5"/>
-                    <constraint firstItem="quV-cW-zpi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ooa-5B-M4g"/>
-                    <constraint firstItem="quV-cW-zpi" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="1:1" id="ynU-AF-l0M"/>
+                    <constraint firstAttribute="bottom" secondItem="quV-cW-zpi" secondAttribute="bottom" constant="15" id="oPT-8n-JVh"/>
+                    <constraint firstItem="quV-cW-zpi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="wqV-Lt-qLJ"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
