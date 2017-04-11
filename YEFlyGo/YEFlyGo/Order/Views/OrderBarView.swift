@@ -17,20 +17,22 @@ let kBarViewCellID = "BarViewCell"
 class OrderBarView: UIView {
 
     var delegate : OrderBarViewDelegate?
-    var titleArr = ["全部", "待支付", "进行中", "待评价", "退款单"]
-    fileprivate lazy var barView : UICollectionView = {
+    fileprivate var titles : [String]
+  
+    fileprivate lazy var collectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
-        layout.itemSize = CGSize(width: CGFloat(kScreenW / 5), height: 30)
-        let barView = UICollectionView(frame: self.bounds, collectionViewLayout: layout)
-        barView.delegate = self
-        barView.dataSource = self
-        barView.backgroundColor = UIColor.white
-        barView.register(BarViewCell.self, forCellWithReuseIdentifier: kBarViewCellID)
-        return barView
+        layout.itemSize = CGSize(width: kScreenW / 5, height: 30)
+        layout.scrollDirection = .horizontal
+        let collectionView = UICollectionView(frame: self.bounds, collectionViewLayout: layout)
+        collectionView.backgroundColor = UIColor.white
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(BarViewCell.self, forCellWithReuseIdentifier: kBarViewCellID)
+        return collectionView
     }()
-    fileprivate lazy var lineView : UIView = {
+   lazy var lineView : UIView = {
     let lineView = UIView(frame: CGRect(x: 0, y: self.frame.height - 3, width: kScreenW / 5, height: 3))
         lineView.backgroundColor = UIColor.orange
         return lineView
@@ -43,23 +45,47 @@ class OrderBarView: UIView {
     }()
     
     
-    override init(frame: CGRect) {
+    init(frame: CGRect, titles: [String]) {
+        self.titles = titles
+        
         super.init(frame: frame)
   
-        addSubview(barView)
-        addSubview(lineBackview)
-        addSubview(lineView)
+        setupUI()
+
+    }
+    func selectItem (atIndex: Int) {
+        for index in 0..<titles.count {
+            let cell = collectionView.cellForItem(at: IndexPath.init(row: index, section: 0)) as! BarViewCell
+            cell.lab.textColor = UIColor.colorFromHex(0x383838)
+            if index == atIndex {
+                cell.lab.textColor = UIColor.colorFromHex(0xfd9816)
+            }
+        }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        // 设置collectionView的layout
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSize(width: kScreenW / 5, height: 30)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    class func creatOrderView() -> OrderBarView{
-        let View = OrderBarView()
-        return View
+}
+
+extension OrderBarView {
+    func setupUI(){
+        
+        addSubview(collectionView)
+        addSubview(lineBackview)
+        addSubview(lineView)
+        
     }
-    
+
 }
 
 extension OrderBarView : UICollectionViewDelegate {
@@ -70,12 +96,12 @@ extension OrderBarView : UICollectionViewDelegate {
 
 extension OrderBarView : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return self.titles.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kBarViewCellID, for: indexPath) as! BarViewCell
         
-         cell.lab.text = titleArr[indexPath.row]
+         cell.lab.text = titles[indexPath.row]
         return cell
     }
 }

@@ -16,7 +16,7 @@ class BarViewCell: UICollectionViewCell {
         lab.textAlignment = .center
         lab.textColor = UIColor.black
         lab.font = UIFont.systemFont(ofSize: 14)
-        self.contentView.addSubview(lab)
+        addSubview(lab)
     }
     
     required init?(coder aDecoder: NSCoder) {

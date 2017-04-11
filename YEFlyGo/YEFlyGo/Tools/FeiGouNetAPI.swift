@@ -41,13 +41,13 @@ class FeiGouNetAPI: NSObject {
 //        }
 //    }
 //    
-//    func getOrderList(status:Int, completion: @escaping (OrderListModel) -> Void) {
-//        request(urlString: "order/findlist", method: .get, parameters: ["userId": UserManager.getUserId(), "Status": status, "pageNum": 0, "pageSize": 10]) { (jsonStr) in
-//            if let model = JSONDeserializer<OrderListModel>.deserializeFrom(json: jsonStr) {
-//                completion(model)
-//            }
-//        }
-//    }
+    func getOrderList(status:Int, completion: @escaping (OrderListModel) -> Void) {
+        request(urlString: "order/findlist", method: .get, parameters: ["userId": "", "Status": status, "pageNum": 0, "pageSize": 10]) { (jsonStr) in
+            if let model = JSONDeserializer<OrderListModel>.deserializeFrom(json: jsonStr) {
+                completion(model)
+            }
+        }
+    }
 
     
     func request(urlString: String, method : HTTPMethod, parameters: [String : Any]?, completion: @escaping(String?) -> Void){

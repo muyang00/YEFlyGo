@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import Kingfisher
 
 let kScreenW : CGFloat = UIScreen.main.bounds.width
 let kScreenH : CGFloat = UIScreen.main.bounds.height

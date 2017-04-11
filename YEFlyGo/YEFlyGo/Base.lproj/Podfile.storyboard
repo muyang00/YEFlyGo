@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="-1249" y="971"/>
         </scene>
-        <!--View Controller-->
+        <!--我的-->
         <scene sceneID="WFu-T2-cRa">
             <objects>
-                <viewController id="k9m-Mh-3Yw" sceneMemberID="viewController">
+                <viewController id="k9m-Mh-3Yw" customClass="PodfileViewController" customModule="YEFlyGo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Dng-i8-mFn"/>
                         <viewControllerLayoutGuide type="bottom" id="QGq-vb-1fb"/>
@@ -40,7 +40,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qNG-LI-mug"/>
+                    <navigationItem key="navigationItem" title="我的" id="qNG-LI-mug"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ut0-y3-edt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

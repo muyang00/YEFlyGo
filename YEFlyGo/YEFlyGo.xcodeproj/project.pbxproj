@@ -33,6 +33,11 @@
 		B4FE15E11E9B676C00AACD9C /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE15E01E9B676C00AACD9C /* OrderModel.swift */; };
 		B4FE15E31E9B67A700AACD9C /* OrderBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE15E21E9B67A700AACD9C /* OrderBarView.swift */; };
 		B4FE15E71E9B907E00AACD9C /* BarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE15E61E9B907E00AACD9C /* BarViewCell.swift */; };
+		B4FE15F21E9C837400AACD9C /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE15DE1E9B675000AACD9C /* OrderViewController.swift */; };
+		B4FE15F41E9C878E00AACD9C /* OrderDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE15F31E9C878E00AACD9C /* OrderDetailController.swift */; };
+		B4FE15F61E9CD8C700AACD9C /* PodfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE15F51E9CD8C700AACD9C /* PodfileViewController.swift */; };
+		B4FE15FB1E9CDBF700AACD9C /* PodfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE15F91E9CDBF700AACD9C /* PodfileViewCell.swift */; };
+		B4FE15FC1E9CDBF700AACD9C /* PodfileViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4FE15FA1E9CDBF700AACD9C /* PodfileViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +95,10 @@
 		B4FE15E01E9B676C00AACD9C /* OrderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		B4FE15E21E9B67A700AACD9C /* OrderBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderBarView.swift; sourceTree = "<group>"; };
 		B4FE15E61E9B907E00AACD9C /* BarViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarViewCell.swift; sourceTree = "<group>"; };
+		B4FE15F31E9C878E00AACD9C /* OrderDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderDetailController.swift; path = ../Views/OrderDetailController.swift; sourceTree = "<group>"; };
+		B4FE15F51E9CD8C700AACD9C /* PodfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodfileViewController.swift; sourceTree = "<group>"; };
+		B4FE15F91E9CDBF700AACD9C /* PodfileViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodfileViewCell.swift; sourceTree = "<group>"; };
+		B4FE15FA1E9CDBF700AACD9C /* PodfileViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PodfileViewCell.xib; sourceTree = "<group>"; };
 		B9AA6DCC44E41DB803852F09 /* Pods-YEFlyGoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YEFlyGoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YEFlyGoUITests/Pods-YEFlyGoUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				B4FE15DE1E9B675000AACD9C /* OrderViewController.swift */,
+				B4FE15F31E9C878E00AACD9C /* OrderDetailController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -240,6 +250,7 @@
 		B455572F1E972109005431F0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B4FE15F51E9CD8C700AACD9C /* PodfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -254,6 +265,8 @@
 		B45557311E972109005431F0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B4FE15F91E9CDBF700AACD9C /* PodfileViewCell.swift */,
+				B4FE15FA1E9CDBF700AACD9C /* PodfileViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -478,6 +491,7 @@
 				B45557C11E97295D005431F0 /* HomeListCell.xib in Resources */,
 				B45557C51E9729E3005431F0 /* CategoryCell.xib in Resources */,
 				B45A5D5E1E962D7B0076E99E /* LaunchScreen.storyboard in Resources */,
+				B4FE15FC1E9CDBF700AACD9C /* PodfileViewCell.xib in Resources */,
 				B45A5D5B1E962D7B0076E99E /* Assets.xcassets in Resources */,
 				B45A5D561E962D7B0076E99E /* Main.storyboard in Resources */,
 				B45557351E972561005431F0 /* Home.storyboard in Resources */,
@@ -652,9 +666,12 @@
 				B45558091E974007005431F0 /* GlobalConfig.swift in Sources */,
 				B4FE15DD1E9B152D00AACD9C /* FeiGouNetAPI.swift in Sources */,
 				B45A5D511E962D7B0076E99E /* AppDelegate.swift in Sources */,
+				B4FE15F61E9CD8C700AACD9C /* PodfileViewController.swift in Sources */,
+				B4FE15F41E9C878E00AACD9C /* OrderDetailController.swift in Sources */,
 				B45A5D591E962D7B0076E99E /* YEFlyGo.xcdatamodeld in Sources */,
 				B45557B91E9727D7005431F0 /* HomeViewController.swift in Sources */,
 				B4FE15E11E9B676C00AACD9C /* OrderModel.swift in Sources */,
+				B4FE15FB1E9CDBF700AACD9C /* PodfileViewCell.swift in Sources */,
 				B45557BB1E9727F4005431F0 /* HomeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -664,6 +681,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B45A5D691E962D7B0076E99E /* YEFlyGoTests.swift in Sources */,
+				B4FE15F21E9C837400AACD9C /* OrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

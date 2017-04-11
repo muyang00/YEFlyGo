@@ -15,7 +15,7 @@
                 <navigationController id="Q3p-HE-3ET" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="首页" id="BwX-aj-FNb"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="J94-wQ-Ohz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J94-wQ-Ohz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.99145156150000002" green="0.82095843550000003" blue="0.085141517220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
