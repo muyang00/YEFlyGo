@@ -26,6 +26,32 @@ class PodfileViewController: UIViewController {
         return tableView
     }()
     
+    var userName : UILabel!
+    var userImg : UIImageView!
+    var isLogin : Bool?
+    
+    fileprivate lazy var headView : UIView = {
+       let view = UIView(frame: CGRect(x: 0, y: 0, width: kScreenW, height: 185))
+        view.backgroundColor = UIColor.colorFromHex(0x989898)
+        let stateView = UIView(frame: CGRect(x: 0, y: -20, width: kScreenW, height: 20))
+        stateView.backgroundColor = UIColor.colorFromHex(0x989898)
+        view.addSubview(stateView)
+        self.userImg = UIImageView(frame: CGRect(x: kScreenW/2 - 49, y: 185/2 - 40, width: 98 , height: 98))
+        self.userImg.kf.setImage(with: URL(string: "https://source.unsplash.com/random/320x320"))
+        self.userImg.layer.masksToBounds = true
+        self.userImg.layer.cornerRadius = 49
+        view.addSubview(self.userImg)
+        self.userName = UILabel(frame: CGRect(x: 20, y: 185/2 + 49 + 5, width: kScreenW - 40, height: 28))
+        self.userName.textColor = UIColor.colorFromHex(0x383838)
+        self.userName.text = "登录"
+        self.userName.textAlignment = .center
+        self.userName.font = UIFont.systemFont(ofSize: 14)
+        view.addSubview(self.userName)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(pushLogin))
+        view.addGestureRecognizer(tap)
+        
+        return view
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,8 +65,13 @@ class PodfileViewController: UIViewController {
 //MARK: - 设置UI界面内容
 extension PodfileViewController {
     func setupUI() {
-       
+        self.navigationController?.navigationBar.isHidden = true
+        self.tableView.tableHeaderView = headView
+        
         view.addSubview(tableView)
+    }
+    func pushLogin(){
+       print("pushLogin")
     }
 }
 
